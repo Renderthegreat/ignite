@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ignite",
+	"version": "${version}",
+	"name": "ignite",
+	"description": "Ignite!",
+	"authors": [
+		"Renderthegreat!"
+	],
+	"contact": {
+		"homepage": "https://renderlabs.cloud/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ignite/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ignite.Ignite"
+		],
+		"client": [
+			"com.ignite.IgniteClient"
+		]
+	},
+	"mixins": [
+		"ignite.mixins.json",
+		{
+			"config": "ignite.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
